@@ -1,1 +1,7 @@
-ECHO is on.
+Tested on python version 12.0
+
+Install Pygame via terminal:
+Try
+pip install pygame
+Or
+py -3.12 -m pip install pygame
