@@ -25,11 +25,20 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Update
+    keys = pygame.key.get_pressed()
 
+    if keys[pygame.K_w]:
+        player.ypos -=2
+    if keys[pygame.K_s]:
+        player.ypos +=2
+    if keys[pygame.K_a]:
+        player.xpos -=2
+    if keys[pygame.K_d]:
+        player.xpos +=2
 
     # Draw
     screen.fill((255,255,255))
-    pygame.draw.circle(screen, (0, 255, 0), (player.xpos , player.ypos), 25)
+    pygame.draw.circle(screen, (0, 255, 0), (player.xpos , player.ypos), 10)
     pygame.display.update()
 pygame.quit()
 
